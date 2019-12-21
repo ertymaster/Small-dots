@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 
 <html>
 <head>
@@ -7,7 +7,6 @@
 </head>
 
 <body>
-	<script src="js/scripts.js"></script>
     <h1>Dots</h1>
 	<canvas id="canvas" width="1000" height="600"></canvas>
 	
@@ -33,7 +32,7 @@
 	dot.draw();
 	
 	Dot.prototype.randmove (){
-		neww = (this.x + 100);
+		neww = (this.x + 10);
 		//this.x = neww;
 		dimension.fillRect(neww/2-(this.size/2), this.y-(this.size/2), this.size, this.size);
 	};
