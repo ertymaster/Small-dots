@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -23,21 +23,29 @@
 
 	
 	Dot.prototype.draw = function () {
+		dimension.fillStyle = "Black"
 		dimension.fillRect(this.x-(this.size/2), this.y-(this.size/2), this.size, this.size);
 	};	
 	
+	Dot.prototype.clear = function () {
+		dimension.fillStyle = "White"
+		dimension.fillRect(this.x-(this.size/2), this.y-(this.size/2), this.size, this.size);
+	};
 	
+	Dot.prototype.randmove = function(rate){
+		this.rate = rate;
+		this.rand = Math.floor(Math.random() * 4)
+		if (this.rand == 0){this.x = (this.x + this.rate);};
+		if (this.rand == 1){this.x = (this.x - this.rate);};
+		if (this.rand == 2){this.y = (this.y + this.rate);};
+		if (this.rand == 3){this.y = (this.y - this.rate);};
+		dot.draw()
+	};
 	
 	var dot= new Dot(10);
 	dot.draw();
+	setInterval(dot.randmove(10), 3000);
 	
-	Dot.prototype.randmove (){
-		neww = (this.x + 10);
-		//this.x = neww;
-		dimension.fillRect(neww/2-(this.size/2), this.y-(this.size/2), this.size, this.size);
-	};
-	
-	dot.randmove();
 	
 	
 	
