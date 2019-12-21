@@ -33,9 +33,9 @@
 	dot.draw();
 	
 	Dot.prototype.randmove (){
-		neww = (this.x + 10);
-		this.x = neww;
-		dimension.fillRect(neww, this.y-(this.size/2), this.size, this.size);
+		neww = (this.x + 100);
+		//this.x = neww;
+		dimension.fillRect(neww/2-(this.size/2), this.y-(this.size/2), this.size, this.size);
 	};
 	
 	dot.randmove();
