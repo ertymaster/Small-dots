@@ -9,7 +9,6 @@
 <body>
     <h1>Dots</h1>
 	<canvas id="canvas" width="1000" height="600"></canvas>
-
 	
 	<script>
 	var canvas = document.getElementById("canvas");
@@ -40,12 +39,20 @@
 		if (this.rand == 1){this.x = (this.x - this.rate);};
 		if (this.rand == 2){this.y = (this.y + this.rate);};
 		if (this.rand == 3){this.y = (this.y - this.rate);};
-		dot.draw()
+		this.draw()
 	};
 	
-	var dot= new Dot(10);
-	dot.draw();
-	setInterval(()=>{dot.randmove(10);}, 1000);
+	repeats = 100;
+	set = [];
+	for (var i = 0; i <= repeats; i++){
+		set.push(new Dot(1));};
+	
+	setInterval(()=>{
+		for (var i = 0; i <= repeats; i++){
+			set[i].clear()
+			set[i].randmove(2);};
+	}, 1);
+
 	
 	
 	</script>
