@@ -45,14 +45,7 @@
 	
 	var dot= new Dot(10);
 	dot.draw();
-	repeats = 100;
-	
-	function f(){console.log(10);};
-	for (var i = 0; i < repeats; i++){
-		setTimeout(f, 1000);
-		dot.randmove(10);
-	};
-
+	setInterval(()=>{dot.randmove(10);}, 1000);
 	
 	
 	</script>
