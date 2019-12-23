@@ -9,6 +9,7 @@
 <body>
     <h1>Dots</h1>
 	<canvas id="canvas" width="1000" height="600"></canvas>
+
 	
 	<script>
 	var canvas = document.getElementById("canvas");
@@ -44,9 +45,14 @@
 	
 	var dot= new Dot(10);
 	dot.draw();
-	setInterval(dot.randmove(10), 3000);
+	repeats = 100;
 	
-	
+	function f(){console.log(10);};
+	for (var i = 0; i < repeats; i++){
+		setTimeout(f, 1000);
+		dot.randmove(10);
+	};
+
 	
 	
 	</script>
